@@ -37,7 +37,7 @@ class AppButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           foregroundColor: foregroundColor ?? Colors.white,
-          backgroundColor: backgroundColor ?? AppColors.grey, // Text color
+          backgroundColor: backgroundColor ?? AppColors.primary, // Text color
           elevation: isOutLined == true ? 0 : 4,
           // Button elevation
           shape: RoundedRectangleBorder(
@@ -53,7 +53,7 @@ class AppButton extends StatelessWidget {
           style: TextStyle(
               fontSize: fontSize ?? 16,
               color: textColor ?? (isOutLined == true ? Colors.black : null),
-              fontWeight: FontWeight.w400),
+              fontWeight: FontWeight.w600),
         ),
       ),
     );

@@ -10,7 +10,7 @@ class Helpers {
         // title: "msg",
         message: msg,
         snackPosition: SnackPosition.BOTTOM,
-        backgroundColor: Color(0xFFF9B233));
+        backgroundColor: Color.fromARGB(255, 225, 81, 24));
     // return Fluttertoast.showToast(
     //     msg: msg,
     //     toastLength: Toast.LENGTH_SHORT,

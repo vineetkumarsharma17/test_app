@@ -7,29 +7,29 @@ class AppTheme {
       primarySwatch: AppColors.primary,
       fontFamily: 'Inter',
       appBarTheme: AppBarTheme(
-          centerTitle: true,
-          iconTheme: IconThemeData(
-            color: AppColors.primary, //change your color here
-          ),
-          titleTextStyle: const TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 16, fontFamily: 'Inter'),
-          backgroundColor: Colors.transparent,
-          elevation: 0),
+        backgroundColor: AppColors.primary,
+        centerTitle: true,
+        iconTheme: IconThemeData(
+          color: Colors.white, //change your color here
+        ),
+        titleTextStyle: const TextStyle(
+            fontWeight: FontWeight.bold, fontSize: 16, fontFamily: 'Inter'),
+      ),
       inputDecorationTheme: InputDecorationTheme(
         disabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppColors.textFieldBorder),
           borderRadius: BorderRadius.circular(5),
         ),
-        border: const OutlineInputBorder(
+        border: OutlineInputBorder(
           borderSide: BorderSide(
             // width: 1,
-            color: Color(0xFF432A19),
+            color: AppColors.textFieldBorder,
           ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
+          borderSide: BorderSide(
             // width: 1,
-            color: Color(0xFF432A19),
+            color: AppColors.textFieldBorder,
           ),
           borderRadius: BorderRadius.circular(10.0),
         ),
@@ -81,7 +81,7 @@ class AppColors {
   static final MaterialColor lightBlue = createSwatch(222, 232, 255, 1);
   static final lightGreyText = createSwatch(180, 172, 162, 1);
   static final MaterialColor heading = createSwatch(6, 44, 128, 1);
-  static final textFieldBorder = Color(0xFF432A19);
+  static final textFieldBorder = Color.fromARGB(255, 146, 144, 142);
   static final MaterialColor textHintColor = createSwatch(164, 164, 164, 1);
   static final error = Colors.red.shade200;
   static final yellowPrimary = Color(0xFFF9B233);
@@ -95,7 +95,7 @@ class AppTextStyle {
   static const TextStyle heading = TextStyle(
       fontFamily: 'Inter', color: Colors.black, fontWeight: FontWeight.w700);
   static const TextStyle text =
-      TextStyle(fontFamily: 'Inter', fontSize: 12, color: Colors.black);
+      TextStyle(fontFamily: 'Inter', color: Colors.black);
   static const TextStyle h1 = TextStyle(
     fontFamily: 'Inter',
     fontSize: 30,

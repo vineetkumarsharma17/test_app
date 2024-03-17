@@ -1,14 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:get/state_manager.dart';
+import '../../../helper/app_export.dart';
 
-class SplashView extends GetView {
+class SplashView extends GetView<AppController> {
   const SplashView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      body: Center(child: Image.asset('assets/icons/logo.png')),
+      body: Center(
+          child: Image.asset(
+        'assets/icons/logo.png',
+        height: 200,
+      )),
     );
   }
 }
