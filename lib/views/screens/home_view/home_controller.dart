@@ -21,9 +21,10 @@ class HomeController extends GetxController {
   }
 
   void getProducts([bool loading = false]) async {
-    if (loading) isLoading(true);
+    isLoading(true);
     try {
       log('run');
+      productsList.clear();
       productsList.value = await HttpService.instance.getProducts();
     } catch (e) {
       log("error $e");

@@ -48,13 +48,9 @@ class ProductController extends GetxController {
       var res = await HttpService.instance.updateProduct(jsonPrm);
       dismissLoadingWidget();
       if (res != null) {
+        Get.find<HomeController>().getProducts();
         Get.back();
         Helpers.toast(res['message']);
-        int index =
-            Get.find<HomeController>().productsList.indexOf(editableProduct);
-        Get.find<HomeController>().productsList.removeAt(index);
-        Get.find<HomeController>().productsList.insert(
-            index, Product.fromJson(jsonPrm).copyWith(id: editableProduct!.id));
       }
     } else {
       var res = await HttpService.instance.addProduct(jsonPrm);
