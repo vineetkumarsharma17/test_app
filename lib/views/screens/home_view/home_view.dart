@@ -4,6 +4,7 @@ import 'package:test_app/views/widgets/buttons.dart';
 import 'package:test_app/views/widgets/shimmer.dart';
 
 import '../../../helper/app_export.dart';
+import '../../widgets/app_drawer.dart';
 import '../add_product/add_product_view.dart';
 import 'home_controller.dart';
 
@@ -22,7 +23,7 @@ class HomeView extends GetView<HomeController> {
                 icon: Icon(Icons.logout_outlined))
           ],
         ),
-        drawer: Drawer(),
+        drawer: const AppDrawer(),
         floatingActionButton: CircleAvatar(
           child: IconButton(
               onPressed: () {
