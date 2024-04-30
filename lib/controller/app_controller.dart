@@ -9,6 +9,7 @@ import 'package:test_app/views/screens/home_view/home_view.dart';
 import '../services/http_service.dart';
 import '../views/screens/auth_view/auth_bindings.dart';
 import '../views/screens/home_view/home_bindings.dart';
+import '../views/screens/scanner/scanner.dart';
 
 class AppController extends GetxController {
   static AppController instance = Get.find();
@@ -45,7 +46,10 @@ class AppController extends GetxController {
       if (user != null) {
         Get.offAll(() => const HomeView(), binding: HomeBindings());
       } else {
-        Get.offAll(() => const LogInView(), binding: AuthBindings());
+        Get.offAll(
+          () => const ScanView(),
+        );
+        // Get.offAll(() => const LogInView(), binding: AuthBindings());
       }
     });
   }
